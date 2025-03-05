@@ -20,6 +20,10 @@ A bot designed to present products and offer programming services, as well as va
 # Quick Start
 You can run the project in two ways: 🚀
 
+In both cases, you should have a .env file where your bot token will be stored.
+
+
+
 1️⃣ Using a simple terminal 🖥️
 
 2️⃣ With a Docker container 🐳
