@@ -8,11 +8,11 @@ shop_router = Router()
 @shop_router.callback_query(F.data == 'shop_start')
 async def cmd_unlocks(callback: CallbackQuery):
 	await callback.message.delete()
-	await callback.message.answer('🔥 Асортимент 🔥', reply_markup=inline_start_shop)
+	await callback.message.answer('Оберіть категорію 👇', reply_markup=inline_start_shop)
 
 @shop_router.callback_query(F.data == 'shop')
 async def cmd_unlocks(callback: CallbackQuery):
-	await callback.message.edit_text('🔥 Асортимент 🔥', reply_markup=inline_start_shop)
+	await callback.message.edit_text('Оберіть категорію 👇', reply_markup=inline_start_shop)
 
 @shop_router.callback_query(F.data == 'tg_bot_info')
 async def cmd_tg_bot_info(callback: CallbackQuery):

@@ -9,6 +9,7 @@ from board_for_start import start_board
 from shop.board_category_shop import category_board
 from shop.crypto.query_crypto.handlers_crypto import router_spread
 from shop.it.query_shop.handlers_shop import shop_router
+from shop.it.keyboard_shop.inline_shop import inline_start_shop
 from information.faq_cmd import info_router
 from information.board_category_info import board_info
 from dotenv import load_dotenv
@@ -43,7 +44,7 @@ async def start(message: Message):
 @ds.callback_query(F.data == "to_category")
 async def cmd_to_category(callback: CallbackQuery):
     await callback.message.delete()
-    await callback.message.answer('Оберіть категорію 👇', reply_markup=category_board)
+    await callback.message.answer('Оберіть категорію 👇', reply_markup=inline_start_shop)
 
 @ds.callback_query(F.data == 'info_start')
 async def info_start(callback: CallbackQuery):
